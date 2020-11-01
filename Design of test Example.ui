@@ -294,7 +294,7 @@ border-radius: 30px 30px;</string>
       <string notr="true">background-color: rgb(100, 221, 23);
 color: rgb(0, 0, 0);
 font: 12pt &quot;Times New Roman&quot;;
-border-radius: 40px 40px;</string>
+border-radius: 40px 40px;cccccccccc</string>
      </property>
      <property name="text">
       <string>3</string>

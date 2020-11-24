@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>650</width>
-    <height>786</height>
+    <width>1279</width>
+    <height>852</height>
    </rect>
   </property>
   <property name="font">
@@ -25,17 +25,20 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="frame_test">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-20</y>
+      <y>0</y>
       <width>641</width>
       <height>811</height>
      </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
     </property>
     <property name="visible">
      <bool>true</bool>
@@ -57,10 +60,10 @@
       <height>621</height>
      </rect>
     </property>
-    <widget class="QPushButton" name="cancel">
+    <widget class="QPushButton" name="ready">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>40</x>
        <y>680</y>
        <width>191</width>
        <height>41</height>
@@ -68,16 +71,16 @@
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(41, 121, 255);</string>
+background-color: rgb(171, 171, 171);</string>
      </property>
      <property name="text">
-      <string>ГОТОВО</string>
+      <string>ГОТОВО </string>
      </property>
     </widget>
-    <widget class="QPushButton" name="Cancel">
+    <widget class="QPushButton" name="drop">
      <property name="geometry">
       <rect>
-       <x>280</x>
+       <x>250</x>
        <y>680</y>
        <width>191</width>
        <height>41</height>
@@ -85,19 +88,19 @@ background-color: rgb(41, 121, 255);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(68, 138, 255);
+background-color: rgb(171, 171, 171);
 </string>
      </property>
      <property name="text">
-      <string>ОТМЕНА</string>
+      <string>СБРОСИТЬ</string>
      </property>
     </widget>
     <widget class="QProgressBar" name="progress">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>40</x>
        <y>630</y>
-       <width>511</width>
+       <width>561</width>
        <height>23</height>
       </rect>
      </property>
@@ -111,8 +114,8 @@ background-color: rgb(68, 138, 255);
     <widget class="QLabel" name="apple">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>660</y>
+       <x>470</x>
+       <y>550</y>
        <width>81</width>
        <height>101</height>
       </rect>
@@ -121,13 +124,13 @@ background-color: rgb(68, 138, 255);
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../Downloads/apple.png</pixmap>
+      <pixmap>apple.png</pixmap>
      </property>
     </widget>
     <widget class="QLabel" name="test_info">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>60</x>
        <y>600</y>
        <width>551</width>
        <height>20</height>
@@ -142,14 +145,118 @@ background-color: rgb(68, 138, 255);
       </font>
      </property>
      <property name="text">
-      <string>ТЕКСТ СООБЩАЮЩИЙ О КОЛИЧЕСТВЕ НАЖАТИЙ ДО КОНЦА ТЕСТА</string>
+      <string>ТЕКСТ СООБЩАЮЩИЙ О КОЛИЧЕСТВЕ НАЖАТИЙ</string>
      </property>
     </widget>
-    <zorder>cancel</zorder>
-    <zorder>Cancel</zorder>
+    <widget class="QPushButton" name="backward">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>680</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(171, 171, 171);
+</string>
+     </property>
+     <property name="text">
+      <string>ОТМЕНА</string>
+     </property>
+    </widget>
+    <zorder>ready</zorder>
+    <zorder>drop</zorder>
+    <zorder>test_info</zorder>
+    <zorder>backward</zorder>
     <zorder>apple</zorder>
     <zorder>progress</zorder>
-    <zorder>test_info</zorder>
+   </widget>
+   <widget class="QFrame" name="frame_result">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>0</y>
+      <width>641</width>
+      <height>811</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(140, 187, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="test_info_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>551</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>СПАСИБО ЗА ПРОХОЖДЕНИЕ ТЕСТА!</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="test_info_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>551</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ВАШ РЕЗУЛЬАТАТ:</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>611</width>
+       <height>681</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -157,7 +264,7 @@ background-color: rgb(68, 138, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>650</width>
+     <width>1279</width>
      <height>21</height>
     </rect>
    </property>
